@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | My Work</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">MyPortfolio</h2>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="content portfolio">
+    <h1>My Projects</h1>
+    <p><b>Here are some of my works showcasing my skills in web development, programming, and design.</b></p>
+
+    <!-- Filters -->
+    <div class="filter-buttons">
+      <button class="active" onclick="filterSelection('all')">All</button>
+      <button onclick="filterSelection('web')">Web Development</button>
+      <button onclick="filterSelection('python')">Python</button>
+      <button onclick="filterSelection('java')">Java</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+      
+  </section>
+
+  <script>
+    // Portfolio filter function
+    function filterSelection(category) {
+      let items = document.getElementsByClassName("portfolio-item");
+      if (category === "all") category = "";
+      for (let i = 0; i < items.length; i++) {
+        items[i].style.display = items[i].className.indexOf(category) > -1 ? "block" : "none";
+      }
+    }
+    filterSelection("all"); // Show all by default
+  </script>
+</body>
+</html>

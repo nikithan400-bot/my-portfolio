@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">MyPortfolio</h2>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Profile Dropdown -->
+      <div class="profile-menu">
+        <img src="niki.jpeg" alt="Profile" class="profile-pic" id="profilePic">
+        <div class="dropdown-menu" id="dropdownMenu">
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="logout.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-img">
+      <img src="niki22.jpeg" height="130px" width="100" alt="My Photo">
+    </div>
+    <div class="about-text">
+      <h1>Hi, I'm Nikitha</h1>
+      <h3>Full Stack Web Developer & Java Programmer</h3>
+      <p>
+        I am a passionate software developer with experience in building responsive web applications 
+        and creating dynamic, user-friendly interfaces. My skills include HTML, CSS, JavaScript, Python, 
+        and Java. I enjoy learning new technologies and contributing to open-source projects.
+      </p>
+      <p>
+        My goal is to develop scalable and efficient applications that solve real-world problems. 
+        I love collaborating with teams and continuously improving my coding skills.
+      </p>
+      <a href="resume.html" class="btn">View My Resume</a>
+    </div>
+  </section>
+
+  <script>
+    // Dropdown toggle
+    const profilePic = document.getElementById('profilePic');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    profilePic.addEventListener('click', () => {
+      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown on outside click
+    window.addEventListener('click', (e) => {
+      if (!profilePic.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
